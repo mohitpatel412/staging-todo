@@ -28,6 +28,9 @@ app.use((err, req, res, next) => {
   res.status(500).send({ message: err.message });
 });
 
+app.use("/", (req, res) => {
+  res.send("Server is Ready!!");
+});
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}/`);
 });
